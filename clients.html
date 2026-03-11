@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Clients | Lane 4 Fundraising</title>
+
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+<style>
+body{
+margin:0;
+font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto;
+color:#24323d;
+background:#f5f3ef;
+line-height:1.7;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+right:0;
+padding:22px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:white;
+box-shadow:0 4px 20px rgba(0,0,0,.06);
+z-index:10;
+}
+
+.logo{
+height:42px;
+}
+
+.hero{
+padding:150px 40px 100px;
+text-align:center;
+color:white;
+background:linear-gradient(135deg,#0e2d40,#1f5576,#6aa7bf);
+position:relative;
+overflow:hidden;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+inset:0;
+background-image:repeating-linear-gradient(
+90deg,
+transparent 0,
+transparent 150px,
+rgba(255,255,255,.08) 150px,
+rgba(255,255,255,.08) 152px
+);
+opacity:.15;
+}
+
+.hero h1{
+font-size:56px;
+margin:0 0 8px;
+position:relative;
+z-index:1;
+}
+
+.hero h2{
+font-size:28px;
+font-weight:400;
+margin:0 0 18px;
+position:relative;
+z-index:1;
+}
+
+.hero p{
+max-width:760px;
+margin:0 auto;
+font-size:18px;
+opacity:.94;
+position:relative;
+z-index:1;
+}
+
+.lane-divider{
+height:80px;
+background:linear-gradient(135deg,transparent 45%,rgba(14,45,64,.08) 45% 52%,transparent 52%);
+}
+
+.section{
+padding:90px 40px;
+}
+
+.section-head{
+max-width:760px;
+margin:0 auto 42px;
+text-align:center;
+}
+
+.section-head h3{
+margin:0 0 12px;
+font-size:34px;
+color:#0e2d40;
+}
+
+.section-head p{
+margin:0;
+color:#61707d;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:36px;
+max-width:1100px;
+margin:auto;
+}
+
+.card{
+background:white;
+padding:28px;
+border-radius:14px;
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+text-align:center;
+transition:.25s;
+text-decoration:none;
+color:inherit;
+border:1px solid transparent;
+}
+
+.card:hover{
+transform:translateY(-4px);
+border-color:rgba(105,167,191,.35);
+}
+
+.logo-wrap{
+height:96px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.logo-whitepad{
+background:white;
+border-radius:12px;
+padding:10px;
+box-shadow:inset 0 0 0 1px rgba(0,0,0,.04);
+}
+
+.logoimg{
+max-width:140px;
+max-height:80px;
+filter:grayscale(100%) brightness(.85);
+transition:filter .3s ease, transform .3s ease;
+}
+
+.card:hover .logoimg{
+filter:none;
+transform:scale(1.05);
+}
+
+.name{
+margin-top:14px;
+font-size:12px;
+letter-spacing:.08em;
+text-transform:uppercase;
+color:#6b7680;
+}
+
+.visit{
+margin-top:8px;
+font-size:12px;
+color:#0e2d40;
+opacity:0;
+transition:opacity .2s ease;
+}
+
+.card:hover .visit{
+opacity:1;
+}
+
+footer{
+padding:40px;
+text-align:center;
+font-size:14px;
+color:#666;
+}
+
+@media(max-width:900px){
+.hero h1{font-size:42px;}
+.hero h2{font-size:24px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html"><img class="logo" src="images/logo.png" alt="Lane 4 Fundraising"></a>
+  <div>☰</div>
+</header>
+
+<section class="hero">
+  <h1>Our Clients</h1>
+  <h2>Past & Present</h2>
+  <p>
+    We are proud to work with organizations whose missions inspire us, from arts institutions and schools to health providers and community development leaders.
+  </p>
+</section>
+
+<div class="lane-divider"></div>
+
+<section class="section">
+  <div class="section-head">
+    <h3>Past & Present Client Partners</h3>
+    <p>
+      Hover to reveal each organization in full color and click to visit their website.
+    </p>
+  </div>
+
+  <div class="grid">
+
+    <a class="card" href="https://www.aihscorp.org" target="_blank" rel="noopener">
+      <div class="logo-wrap logo-whitepad"><img class="logoimg" src="images/clients/aihs.png" alt="American Indian Health Services"></div>
+      <div class="name">American Indian Health Services</div>
+      <div class="visit">Visit site ↗</div>
+    </a>
+
+    <a class="card" href="https://environmentaldefensecenter.org" target="_blank" rel="noopener">
+      <div class="logo-wrap"><img class="logoimg" src="images/clients/edc.jpg" alt="Environmental Defense Center"></div>
+      <div class="name">Environmental Defense Center</div>
+      <div class="visit">Visit site ↗</div>
+    </a>
+
+    <a class="card" href="https://lompoctheatre.org" target="_blank" rel="noopener">
+      <div class="logo-wrap"><img class="logoimg" src="images/clients/ltp.png" alt="Lompoc Theatre Project"></div>
+      <div class="name">Lompoc Theatre Project</div>
+      <div class="visit">Visit site ↗</div>
+    </a>
+
+    <a class="card" href="https://merola.org" target="_blank" rel="noopener">
+      <div class="logo-wrap"><img class="logoimg" src="images/clients/merola.jpg" alt="Merola Opera Program"></div>
+      <div class="name">Merola Opera Program</div>
+      <div class="visit">Visit site ↗</div>
+    </a>
+
+    <a class="card" href="https://palsb.org" target="_blank" rel="noopener">
+      <div class="logo-wrap"><img class="logoimg" src="images/clients/pal.jpg" alt="Police Activities League Santa Barbara"></div>
+      <div class="name">Police Activities League Santa Barbara</div>
+      <div class="visit">Visit site ↗</div>
+    </a>
+
+    <a class="card" href="https://riseandshineglobal.org" target="_blank" rel="noopener">
+      <div class="logo-wrap logo-whitepad"><img class="logoimg" src="images/clients/rise-shine.png" alt="Rise and Shine"></div>
+      <div class="name">Rise & Shine</div>
+      <div class="visit">Visit site ↗</div>
+    </a>
+
+    <a class="card" href="https://statestreetballet.com" target="_blank" rel="noopener">
+      <div class="logo-wrap"><img class="logoimg" src="images/clients/ssb.jpg" alt="State Street Ballet"></div>
+      <div class="name">State Street Ballet</div>
+      <div class="visit">Visit site ↗</div>
+    </a>
+
+    <a class="card" href="https://turnerfoundation.org" target="_blank" rel="noopener">
+      <div class="logo-wrap"><img class="logoimg" src="images/clients/turner.jpg" alt="The Turner Foundation"></div>
+      <div class="name">The Turner Foundation</div>
+      <div class="visit">Visit site ↗</div>
+    </a>
+
+    <a class="card" href="https://www.campuscalendar.ucsb.edu/department/athletics" target="_blank" rel="noopener">
+      <div class="logo-wrap logo-whitepad"><img class="logoimg" src="images/clients/ucsb.jpg" alt="UCSB"></div>
+      <div class="name">UCSB</div>
+      <div class="visit">Visit site ↗</div>
+    </a>
+
+    <a class="card" href="https://wevonline.org" target="_blank" rel="noopener">
+      <div class="logo-wrap"><img class="logoimg" src="images/clients/wev.jpg" alt="Women's Economic Ventures"></div>
+      <div class="name">Women's Economic Ventures</div>
+      <div class="visit">Visit site ↗</div>
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  Lane 4 Fundraising<br>
+  Santa Barbara, California
+</footer>
+
+</body>
+</html>
