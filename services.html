@@ -5,14 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | Lane 4 Fundraising</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Roboto+Slab:wght@300;400;600&display=swap" rel="stylesheet" />
+
   <style>
     :root {
       --marine: #0e2d40;
       --marine-2: #123a54;
       --sky: #69a7bf;
       --light: #d1e7f8;
-      --gold: #c8a36a;
-      --gold-soft: #d7b988;
+      --gray: #f3f3f3;
+      --sand: #f8e2d1;
+      --clay: #bf8169;
+      --coffee: #40210e;
       --text: #23303b;
       --muted: #61707d;
       --line: rgba(14, 45, 64, 0.1);
@@ -29,9 +35,9 @@
 
     body {
       margin: 0;
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      font-family: "Libre Franklin", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text);
-      background: linear-gradient(180deg, #f7f5f1 0%, #f3efe8 100%);
+      background: linear-gradient(180deg, var(--gray) 0%, #f5eae2 100%);
       line-height: 1.72;
     }
 
@@ -127,7 +133,7 @@
 
     .hamburger:hover {
       transform: translateY(-1px);
-      border-color: rgba(200, 163, 106, 0.65);
+      border-color: rgba(191, 129, 105, 0.65);
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
     }
 
@@ -180,14 +186,14 @@
 
     .mobile-nav a:hover {
       background: rgba(14, 45, 64, 0.04);
-      color: #7c6035;
+      color: var(--coffee);
     }
 
     .hero {
       position: relative;
       overflow: hidden;
       color: white;
-      padding: 150px 0 98px;
+      padding: 150px 0 100px;
       background:
         radial-gradient(circle at 84% 18%, rgba(209, 231, 248, 0.34), transparent 28%),
         radial-gradient(circle at 12% 78%, rgba(105, 167, 191, 0.18), transparent 34%),
@@ -246,7 +252,7 @@
 
     .hero-note {
       margin-top: 22px;
-      color: #f2ddba;
+      color: var(--sand);
       text-transform: uppercase;
       letter-spacing: 0.16em;
       font-size: 0.84rem;
@@ -387,14 +393,14 @@
 
     .tagline {
       font-weight: 700;
-      color: #35567b;
+      color: var(--marine-2);
       margin-bottom: 16px;
       font-size: 1.05rem;
     }
 
     .service-card p {
       margin: 0 0 14px;
-      color: #53626f;
+      color: var(--muted);
       line-height: 1.8;
       max-width: 950px;
     }
@@ -439,7 +445,7 @@
 
     .footer p {
       margin: 0;
-      color: #667480;
+      color: var(--muted);
       line-height: 1.7;
     }
 
