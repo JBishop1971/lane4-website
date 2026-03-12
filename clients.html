@@ -112,7 +112,7 @@
       width: 52px;
       height: 52px;
       border-radius: 14px;
-      display: grid;
+      display: none;
       place-items: center;
       border: 1px solid rgba(255, 255, 255, 0.24);
       background: rgba(255, 255, 255, 0.06);
@@ -144,7 +144,33 @@
 
     header.scrolled .hamburger span { background: var(--marine); }
 
-    .mobile-nav {
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .desktop-nav a {
+      padding: 8px 14px;
+      border-radius: 10px;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.01em;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .desktop-nav a:hover {
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    header.scrolled .desktop-nav a {
+      color: var(--marine);
+    }
+
+    header.scrolled .desktop-nav a:hover {
+      background: rgba(14, 45, 64, 0.06);
+    }
       position: fixed;
       top: 94px;
       right: 20px;
@@ -442,6 +468,14 @@
         top: 82px;
         right: 16px;
       }
+
+      .hamburger {
+        display: grid;
+      }
+
+      .desktop-nav {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -460,10 +494,18 @@
           <span></span>
         </div>
       </button>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="clients.html">Clients</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <nav class="mobile-nav" id="mobileNav">
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="services.html">Services</a>
