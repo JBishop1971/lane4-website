@@ -171,6 +171,8 @@
     header.scrolled .desktop-nav a:hover {
       background: rgba(14, 45, 64, 0.06);
     }
+
+    .mobile-nav {
       position: fixed;
       top: 94px;
       right: 20px;
@@ -377,13 +379,18 @@
     .logoimg {
       max-width: 150px;
       max-height: 82px;
-      filter: grayscale(100%) brightness(.85);
       transition: filter .3s ease, transform .3s ease;
     }
 
-    .card:hover .logoimg {
-      filter: none;
-      transform: scale(1.05);
+    @media (hover: hover) and (pointer: fine) {
+      .logoimg {
+        filter: grayscale(100%) brightness(.85);
+      }
+
+      .card:hover .logoimg {
+        filter: none;
+        transform: scale(1.05);
+      }
     }
 
     .name {
@@ -529,7 +536,6 @@
     <div class="container">
       <div class="section-head">
         <h2>Past &amp; Present Client Partners</h2>
-        <p>Hover to reveal each organization in full color and click to visit their website.</p>
       </div>
 
       <div class="grid">
