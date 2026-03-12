@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Page Not Found | Lane 4 Fundraising</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Roboto+Slab:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --marine: #0e2d40;
+      --marine-2: #123a54;
+      --sky: #69a7bf;
+      --light: #d1e7f8;
+      --gray: #f3f3f3;
+      --sand: #f8e2d1;
+      --clay: #bf8169;
+      --coffee: #40210e;
+      --text: #23303b;
+      --muted: #61707d;
+      --line: rgba(14, 45, 64, 0.1);
+      --shadow: 0 18px 42px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Libre Franklin", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 84% 18%, rgba(209, 231, 248, 0.34), transparent 28%),
+        radial-gradient(circle at 12% 78%, rgba(105, 167, 191, 0.18), transparent 34%),
+        linear-gradient(135deg, var(--marine) 0%, var(--marine-2) 28%, #1d4f71 58%, var(--sky) 82%, var(--light) 100%);
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 28px 0 0;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand img {
+      height: 64px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .nav-links a {
+      padding: 8px 14px;
+      border-radius: 10px;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    main {
+      flex: 1;
+      display: grid;
+      place-items: center;
+      padding: 56px 0 88px;
+    }
+
+    .card {
+      width: min(720px, 100%);
+      padding: 48px 42px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18);
+      backdrop-filter: blur(14px);
+      color: white;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--sand);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(3rem, 8vw, 4.6rem);
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+      text-wrap: balance;
+    }
+
+    p {
+      margin: 0 auto;
+      max-width: 34rem;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.08rem;
+      line-height: 1.72;
+    }
+
+    .actions {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 176px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+    }
+
+    .button-primary {
+      background: linear-gradient(135deg, var(--sand), var(--clay));
+      color: var(--marine);
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.16);
+    }
+
+    .button-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    footer {
+      padding: 0 0 34px;
+      color: rgba(255, 255, 255, 0.78);
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        width: min(100% - 32px, 1160px);
+      }
+
+      .nav {
+        flex-direction: column;
+      }
+
+      .brand img {
+        height: 56px;
+      }
+
+      .card {
+        padding: 36px 24px;
+        border-radius: 24px;
+      }
+
+      h1 {
+        font-size: 2.7rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Lane 4 Fundraising home">
+        <img src="logo-white.png" alt="Lane 4 Fundraising" />
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="clients.html">Clients</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="card" aria-labelledby="not-found-title">
+        <p class="eyebrow">404 Error</p>
+        <h1 id="not-found-title">This lane doesn’t lead anywhere.</h1>
+        <p>
+          The page you requested could not be found. Return home, explore our services, or contact Lane 4 Fundraising and we will help you get where you need to go.
+        </p>
+        <div class="actions">
+          <a class="button button-primary" href="index.html">Back to Home</a>
+          <a class="button button-secondary" href="contact.html">Contact Us</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">Santa Barbara, California · © Lane 4 Fundraising</div>
+  </footer>
+</body>
+</html>
