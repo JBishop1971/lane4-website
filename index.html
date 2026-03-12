@@ -75,14 +75,40 @@
       min-height: 82px;
     }
 
-    .brand img {
-      height: 72px;
-      width: auto;
-      display: block;
-      transition: height 0.25s ease;
+    .brand {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-width: 260px;
     }
 
-    header.scrolled .brand img {
+    .brand img {
+      width: auto;
+      display: block;
+      transition: opacity 0.25s ease, height 0.25s ease;
+    }
+
+    .logo-white {
+      height: 72px;
+      opacity: 1;
+    }
+
+    .logo-dark {
+      height: 72px;
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    header.scrolled .logo-white {
+      opacity: 0;
+      height: 56px;
+    }
+
+    header.scrolled .logo-dark {
+      opacity: 1;
       height: 56px;
     }
 
@@ -472,11 +498,13 @@
         min-height: 76px;
       }
 
-      .brand img {
+      .logo-white,
+      .logo-dark {
         height: 58px;
       }
 
-      header.scrolled .brand img {
+      header.scrolled .logo-white,
+      header.scrolled .logo-dark {
         height: 48px;
       }
 
@@ -516,7 +544,8 @@
   <header id="siteHeader">
     <div class="container nav">
       <a class="brand" href="index.html">
-        <img src="logo-white.png" alt="Lane 4 Fundraising" />
+        <img class="logo-white" src="logo-white.png" alt="Lane 4 Fundraising" />
+        <img class="logo-dark" src="logo-dark.png" alt="Lane 4 Fundraising" />
       </a>
 
       <button class="hamburger" id="menuToggle" aria-label="Open navigation">
